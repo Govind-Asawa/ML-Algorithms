@@ -61,15 +61,16 @@ class CustomLinearRegression(object):
     def predict(self, X):
         return np.dot(self.coef_, X.T) + self.intercept_
 
-    def fit(self, X, y, verbose = 2):
+    def fit(self, X, y, verbose = 3):
         """
         :params:
             X - 2D array or a DataFrame of shape (m, n), where
                 m is the number of samples and n is the number of features
             Y - 1D array or Series of shape (1, m), consisting of target variable
-            verbose - int, 1 or 2
+            verbose - int, 1, 2 or 3
                     1 - print the progress over each epoch
                     2 - just the final cost
+                    3 - no ack
         """
         
         X = np.array(X)
